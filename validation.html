@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+
+        body{
+            background-color: #3498db;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        #container{
+            background-color: #ffffff;
+            padding: 50px;
+            text-align: center;
+        }
+    
+        h1{
+            margin: 0 0 10px 0;
+        }
+
+        input{
+            width: 200px;
+            margin: 10px 0;
+            padding: 10px;
+        }
+
+        input[type="submit"]{
+            width: 225px;
+            background-color: #3498db;
+            border: 0px;
+            color: white;
+        }
+
+        .error{
+            color: red;
+            margin: 0;
+            text-align: left;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div id="container">
+        <h1>Login</h1>
+        <form action="" onsubmit="return validation()"> <!-- return true or false by script -->
+            <input type="text" placeholder="User Name" id="name"><br>
+            <p id=errorname class="error"></p>
+            <input type="password" placeholder="Password" id="pass"><br>
+            <p id=errorpass class="error"></p>
+            <input type="submit">
+        </form>
+    </div>
+
+    <script>
+        
+        let name = document.getElementById("name")
+        let pass = document.getElementById("pass")
+        let flag = 1
+
+        function validation(){
+            if(name.value==""){
+                document.getElementById("errorname").innerHTML="User Name - Empty"
+                flag = 0        
+            }
+            else if(name.value.length<3){
+                document.getElementById("errorname").innerHTML="User Name - Min 3 Char"
+                flag = 0        
+            }
+            else{
+                document.getElementById("errorname").innerHTML=""
+                flag = 1        
+            }
+            
+            if(pass.value==""){
+                document.getElementById("errorpass").innerHTML="Password - Empty"
+                flag = 0        
+            }
+            else if(pass.value.length<3){
+                document.getElementById("errorpass").innerHTML="Password - Min 3 Char"
+                flag = 0        
+            }
+            else{
+                document.getElementById("errorpass").innerHTML=""
+                flag = 1        
+            }
+
+
+            if(flag){
+                return true
+            }
+            else{
+                return false
+            }
+                
+        }
+    </script>
+
+</body>
+</html>

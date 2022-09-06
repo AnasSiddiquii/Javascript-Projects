@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Menu</title>
+
+    <style>
+        body{margin: 0;}
+        #header{text-align: center;}
+        #logo{width: 250px;height: auto;}
+        #menu{text-align: center;background-color: cadetblue;}
+        #menu li{
+            display: inline-block;
+            padding: 15px 10px;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .sticky{
+            position: fixed;
+            top: 0px;
+            width: 100%;
+        }
+        
+        #container{text-align: center;padding: 50px 100px;}
+        #abt_img{width: 100%;}
+        p{text-align: justify;}    
+    </style>
+
+</head>
+<body>
+    
+    <div id="header">
+        <img src="https://img.freepik.com/premium-vector/nature-logo-design-template_132230-459.jpg?w=740" alt="" id="logo">
+    </div>
+    <nav id="menu">
+        <li>Home</li>
+        <li>About Us</li>
+        <li>Team</li>
+        <li>Client</li>
+        <li>Contact Us</li>
+    </nav>
+    <div id="container">
+        <h1>About Us</h1>
+        <img src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_1934,h_993/https://www.susangreenecopywriter.com/wp-content/uploads/2013/01/iStock_000039291924_Medium.jpg" alt="" id="abt_img">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus veniam atque obcaecati molestiae eligendi? Porro dignissimos sunt aperiam excepturi praesentium reiciendis dolores iste id vel temporibus nihil mollitia placeat nostrum et ullam delectus minus eos sint, consequuntur libero odio nulla neque, perferendis sequi. Velit excepturi in repellendus architecto ipsam sequi debitis aspernatur voluptatem. Vero, adipisci voluptate incidunt possimus ex voluptatibus aliquam illum? Debitis mollitia, culpa non id ad fugiat repudiandae dolorum nobis hic nulla neque repellendus voluptatibus magni. Nam corporis sequi commodi voluptas exercitationem nemo nulla ratione dolor, non voluptatibus, enim odio! Natus repellendus voluptas quam laborum quidem sit aliquam. Totam odio voluptate minima nisi asperiores ducimus quidem voluptates cupiditate soluta quibusdam quo harum enim labore rerum atque eaque ea consectetur, illo veritatis mollitia esse dolorem libero porro. Officiis veniam ea facere animi ipsam! Voluptatem, dignissimos recusandae magnam esse praesentium at tenetur dolore mollitia! Autem, molestias. Veritatis quas numquam similique, commodi dolorum odit quae tempore ratione explicabo doloremque eveniet, esse, a inventore ipsam exercitationem neque temporibus? Reiciendis repellendus nobis, quibusdam molestias perspiciatis pariatur totam libero facere a veniam, obcaecati id incidunt quidem maxime! Animi sit cumque pariatur nobis amet asperiores, totam, saepe consequatur est, vel deleniti rerum corporis nostrum numquam autem excepturi hic nemo facere dolor odio. Perspiciatis rem animi consequatur eos et unde quisquam, est aliquid porro distinctio assumenda ex! Sequi, dolores est accusamus rem non voluptatibus vitae soluta, voluptates quos similique debitis deserunt voluptatem sunt dicta possimus laudantium incidunt minus ut consectetur quasi reprehenderit? Tenetur cupiditate fuga, suscipit recusandae sed quod repellat dolorum! Excepturi est aut, facere eum maiores rerum laborum exercitationem atque accusamus illum. Enim ipsa ducimus atque fugit porro nulla quaerat dolorum incidunt accusamus voluptatum. Earum minus maxime nemo possimus corrupti delectus ratione aperiam, cum ut culpa atque beatae. Illo sed perferendis modi doloremque necessitatibus. Pariatur voluptate obcaecati similique quod ipsam vitae laudantium sequi eaque amet aspernatur quas rem aliquid quis ipsa asperiores earum soluta id ex sint nam distinctio, accusamus, sapiente quibusdam deleniti. Quae suscipit sit molestiae molestias ipsum. Aut vitae sunt odit ad, voluptas voluptatem nesciunt fuga qui distinctio quis omnis voluptatibus, laborum est minima sit explicabo rem nemo expedita nihil iusto. Nobis quos maiores, iure ab quod excepturi distinctio quisquam inventore esse at velit ea, nostrum non earum debitis explicabo. Libero pariatur repellendus quidem maxime explicabo ipsa quia, fugit sint exercitationem, reprehenderit ducimus tenetur quo tempora consequuntur quaerat totam delectus corrupti eaque laudantium cupiditate perferendis dolores nemo, quam doloribus. Dignissimos saepe dolorum impedit sequi aliquam possimus vel aperiam quae? Eum repudiandae, adipisci quaerat maiores amet aperiam omnis, numquam, est iste eaque distinctio blanditiis! Corporis fugiat, rem quaerat at reprehenderit explicabo illum blanditiis odio ab expedita itaque ducimus repudiandae, ullam sed alias tempore, sint nemo consectetur! Vel magni inventore enim autem blanditiis ullam dolores velit omnis, repellendus reiciendis laboriosam aliquam unde expedita deleniti in necessitatibus et. Temporibus exercitationem mollitia animi quisquam perspiciatis! Corporis tempora nihil ipsum quis eligendi obcaecati, impedit reprehenderit delectus maiores aliquid officia inventore quisquam, non accusamus voluptate amet deleniti cupiditate veritatis?
+        </p>
+    </div>
+    
+    <script>
+        window.addEventListener("scroll",function(){
+            let menu = document.getElementById("menu")
+            
+            if(window.pageYOffset >= 254){
+                menu.classList.add("sticky") // calling n adding css
+            }
+            else{
+                menu.classList.remove("sticky") // calling n adding css
+
+            }
+        })
+
+    </script>
+
+</body>
+</html>

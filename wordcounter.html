@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Counter</title>
+    <style>
+        body{
+            padding: 100px;
+        }
+        
+        h1{
+            text-align: center;
+            background-color: #0067b0;
+            color: white;
+            padding: 10px;
+            margin: 0;
+        }
+
+        #textbox{
+            width: 99.3%;
+            border: 1px solid #0067b0;
+            font-size: 15px;
+            height: 350px;
+        }
+
+        p{
+            text-align: center;
+            background-color: #0067b0;
+            font-size: 25px;
+            font-weight: bold;
+            color: white;
+            padding: 10px;
+            margin: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Word and character counter</h1>
+    <textarea name="" id="textbox" cols="30" rows="10"></textarea>
+    <p>
+        <span id="word">0</span> words and 
+        <span id="char">0</span> characters
+    </p>
+
+    <script>
+        let textbox = document.getElementById("textbox")
+        textbox.addEventListener("input",function(){
+
+            let text = this.value  // get value
+            let char = text.length // count words
+            document.getElementById("char").innerHTML = char // change 0 to count
+            
+            text = text.trim()           // removes front n end spaces 
+            let word = text.split(" ")   // converts into array
+            
+            let clean_array = word.filter(function(elm){return elm!=""}) // removes spaces from between 
+            document.getElementById("word").innerHTML = clean_array.length    // change 0 to count
+        })
+
+
+    </script>
+
+</body>
+</html>
